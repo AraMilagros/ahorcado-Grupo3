@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "title": "Alex Colpari",
+        "presentation": "Hola, me llamo Alex, me gusta jugar Minecraft y me sobran las ganas de morirme uwu.",
+        "url": "https://github.com/AlexUwU"
+    },
+
+    {
+        "id": 2,
+        "title": "Lucas Alberto Rafael Martinez LLosco",
+        "presentation": "'Me gusta el basquet y el gym, un tipo normal en la vida.'",
+        "url": "https://github.com/LucasGGz"
+    },
+    {
+        "id": 3,
+        "title": "Jose luis Marquez",
+        "presentation": ":v",
+        "url": "https://github.com/Tetricslaughter"
+    },
+    {
+        "id": 4,
+        "title": "Araceli Palenque",
+        "presentation": "Edad: 26. Intereses: libros.",
+        "url": "https://github.com/AraMilagros"
+    },
+    {
+        "id": 5,
+        "title": "Bueno, Rafael Ismael Pérez Fascio",
+        "presentation": "'Demasiado ocupado para dar una descripción'",
+        "url": "https://github.com/RafaelFascio"
+    },
+    {
+        "id": 6,
+        "title": "Ariel Reyes",
+        "presentation": "",
+        "url": "https://github.com/Areyss"
+    }
+   
+    
+]
