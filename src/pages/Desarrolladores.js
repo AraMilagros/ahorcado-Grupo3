@@ -18,14 +18,12 @@ function Desarrolladores() {
       <Header />
       <div className="container d-flex align-items-center h-100">
         <div className="row">
-          {desarrollador.map(({ title, image, presentation, url, id }) =>
+          {desarrollador.map(({ title, edad, interes, presentation, url, id }) =>
           (<div className="col-md-4" key={id}>
-            <Card imageSource={fotos[id-1]} title={title} presentation={presentation} url={url} />
+            <Card imageSource={fotos[id-1]} title={title} edad={edad} interes={interes} presentation={presentation} url={url} />
           </div>))}
         </div>
-        <div className="row">
-
-        </div>
+        <div className="row"></div>
       </div>
     </>
   );

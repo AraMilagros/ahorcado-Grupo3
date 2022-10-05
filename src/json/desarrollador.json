@@ -2,6 +2,8 @@
     {
         "id": 1,
         "title": "Alex Colpari",
+        "edad": "20 años",
+        "interes": "Dormir xd",
         "presentation": "Hola, me llamo Alex, me gusta jugar Minecraft y me sobran las ganas de morirme uwu.",
         "url": "https://github.com/AlexUwU"
     },
@@ -9,30 +11,40 @@
     {
         "id": 2,
         "title": "Lucas Alberto Rafael Martinez LLosco",
+        "edad": "#",
+        "interes": "#",
         "presentation": "'Me gusta el basquet y el gym, un tipo normal en la vida.'",
         "url": "https://github.com/LucasGGz"
     },
     {
         "id": 3,
         "title": "Jose luis Marquez",
+        "edad": "#",
+        "interes": "#",
         "presentation": ":v",
         "url": "https://github.com/Tetricslaughter"
     },
     {
         "id": 4,
         "title": "Araceli Palenque",
+        "edad": "#",
+        "interes": "#",
         "presentation": "Edad: 26. Intereses: libros.",
         "url": "https://github.com/AraMilagros"
     },
     {
         "id": 5,
         "title": "Bueno, Rafael Ismael Pérez Fascio",
+        "edad": "#",
+        "interes": "#",
         "presentation": "'Demasiado ocupado para dar una descripción'",
         "url": "https://github.com/RafaelFascio"
     },
     {
         "id": 6,
         "title": "Ariel Reyes",
+        "edad": "#",
+        "interes": "#",
         "presentation": "",
         "url": "https://github.com/Areyss"
     }
