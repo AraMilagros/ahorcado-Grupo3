@@ -27,14 +27,14 @@
     {
         "id": 4,
         "title": "Araceli Palenque",
-        "edad": "#",
-        "interes": "#",
-        "presentation": "Edad: 26. Intereses: libros.",
+        "edad": "26 años",
+        "interes": "Libros y música en general",
+        "presentation": "Estudiante de primer año de la Tecnicatura universitaria de diseño integral de videojuegos",
         "url": "https://github.com/AraMilagros"
     },
     {
         "id": 5,
-        "title": "Bueno, Rafael Ismael Pérez Fascio",
+        "title": "Rafael Ismael Pérez Fascio",
         "edad": "#",
         "interes": "#",
         "presentation": "'Demasiado ocupado para dar una descripción'",
