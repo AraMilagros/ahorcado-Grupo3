@@ -1,0 +1,65 @@
+
+.Ahorcado{
+    display: flex;
+    margin-left: 200px;
+
+}
+
+.opciones{
+    display: inline;
+    margin-top: 600px;
+    margin-right: 10px;
+}
+
+.contenedor{
+    display: flex;
+    display: inline;
+  
+    
+}
+
+.New{
+    display: flex;
+    margin-top: 50px;
+    border: 2px solid #435dcf;
+    background-color: #435dcf;
+    margin-left: 10px;
+    box-shadow: 0 4px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.New:hover{
+    background-color:  #51c8d8; /* Green */
+    color: white;
+}
+
+.botonesB{
+    margin-left: 10px;
+    margin-top: 8px;
+    border: none;
+    background-color: #435dcf;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border: 2px solid #435dcf;
+}
+
+.botonesB:hover{
+    background-color: #51c8d8; 
+    color: white;
+}
+
+.mensajes{
+    font-size: 20px;
+    text-shadow: 0 0 2px rgb(39, 168, 201);
+}
+
+.mensajes2{
+    font-size: 15px;
+    text-shadow: 0 0 2px rgb(39, 168, 201);
+}
+.mensajes3{
+    text-shadow: 0 0 2px rgb(39, 168, 201);
+    font-size: 20px;
+}
+

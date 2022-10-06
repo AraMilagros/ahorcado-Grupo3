@@ -3,6 +3,7 @@ import abecedario from '../json/abecedario.json';
 import diccionario from '../json/diccionario.json';
 import Botones from "./Botones";
 import Imagenes from "./Imagenes";
+import "../../src/assets/css/styleA.css";
 
 //Declaracion de variables Globales.
 let intRest; //se usa para contar los intentos que le quedan al jugador(sirve especialmente para saber si el jugador perdió o no) no se usó useState porque este retardaba el mensaje de derrota.
@@ -132,15 +133,15 @@ const deshabilitarBotones =()=>{
       <main>
         <section>
           <div className="mensajes">{mensaje}</div>
-          <div>{palabraRespuesta}</div>
-           <div>{mensaje2}</div>
+          <div className="mensajes3">{palabraRespuesta}</div>
+           <div className="mensajes2">{mensaje2}</div>
           <div className="progresoImg">
             <Imagenes i={intentosRestantes} />
           </div>
         </section>
       </main>
       <div className="opciones">
-      <button onClick={reiniciarJuego}>Nueva Palabra</button>
+      <button className="New" onClick={reiniciarJuego}>Nueva Palabra</button>
         {abecedario.map((l,i) => (   //con un map se recorre el archivo abecedario.json
               <Botones key={i} elegir={verificarLetra} valor={l.letra} deshabilitar={l.disable} />//se mandan como props, al componente Botones, la funcion VerificarLetra, cada elemnto letra y el elmento disable del json.
             ))}                                                                                   
