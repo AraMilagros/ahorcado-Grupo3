@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import abecedario from '../../json/abecedario.json';
-import diccionario from '../../json/diccionario.json';
+import abecedario from '../json/abecedario.json';
+import diccionario from '../json/diccionario.json';
 import Botones from "./Botones";
+import Imagenes from "./Imagenes";
 
 //Declaracion de variables Globales.
 let intRest; //se usa para contar los intentos que le quedan al jugador(sirve especialmente para saber si el jugador perdió o no) no se usó useState porque este retardaba el mensaje de derrota.
@@ -25,7 +26,7 @@ const asignarPalabra = () => {
   arrayPalabraOculta = new Array(palabraElegida.palabra.length).fill('_ ');//se le asigna a esta variable un nuevo array con el mismo tamaño de palabraElegida pero se lo llena con "_ ".
   faltaParaGanar=palabraElegida.palabra.length;//se le asigna a la variable la cantidad de letras que tiene la palabra elegida.
   setPalabraRespuesta(arrayPalabraOculta.join(''));//se transforma el array de la palabra oculta a un string y se le asigna al estado de palabraRespuesta.
-  setPalabra(arrayPalabra.join(''));//se transforma el array de la palabra elegida a un string y se le asigna al estado de palabra.
+  setPalabra(palabraElegida.palabra.join(''));//se transforma el array de la palabra elegida a un string y se le asigna al estado de palabra.
 
 };
 
@@ -57,6 +58,7 @@ const cambiarResultado = ()=>{
     if(intRest <1){                                     //Si la variable global intRest es menor a 1 se 
         setMensaje("¡¡MEJOR LA PRÓXIMA!!");             //actualiza el estado del mensaje mencionando la derrota y
         setMensaje2("La palabra buscada era: "+palabra);//el de un 2do mensaje con la respuesta. Por último se 
+        setIntentosRestantes(0);
         deshabilitarBotones();                          //llama a una función que deshabilita todos los botones con letras.
     }else if(faltaParaGanar<1){                 //Si la variable global faltaParaGanar es menor a 1 se
         setMensaje("¡¡FELICIDADES GANASTE!!");  //actualiza el estado del mensaje mencionando la victoria y
@@ -66,7 +68,7 @@ const cambiarResultado = ()=>{
     }
 }
 
-//Dependiendo del estado de intentosRestantes se le asigna a una variable local un string con la
+/*//Dependiendo del estado de intentosRestantes se le asigna a una variable local un string con la
 const MostrarImagen = () => {     //ruta de la imagen correspondiente y la función retorna un 
   let imagenParaMostrar;          //elemento img de html con la imagen correspondiente a mostrar.
   switch (intentosRestantes) {
@@ -98,7 +100,7 @@ const MostrarImagen = () => {     //ruta de la imagen correspondiente y la funci
   return (
     <img src={[imagenParaMostrar]} alt="none"/>
   );
-};
+};*/
 
 //Esta función reinicia o resetea las variables a sus valores por defecto
 const reiniciarJuego = () =>{
@@ -133,7 +135,7 @@ const deshabilitarBotones =()=>{
           <div>{palabraRespuesta}</div>
            <div>{mensaje2}</div>
           <div className="progresoImg">
-            <MostrarImagen />
+            <Imagenes i={intentosRestantes} />
           </div>
         </section>
       </main>

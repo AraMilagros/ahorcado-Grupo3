@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Ahorcado from "../components/Ahorcado";
 
 export default function Juego(){
     return(
@@ -29,7 +30,7 @@ export default function Juego(){
 
                 <div className="tab-content" id="myTabContent">
                     <div className="tab-pane fade show active" id="uno-pane" role="tabpanel" aria-labelledby="uno" tabIndex="0"><h1>UNO</h1></div>
-                    <div className="tab-pane fade" id="dos-pane" role="tabpanel" aria-labelledby="dos" tabIndex="0"><h1>DOS</h1></div>
+                    <div className="tab-pane fade" id="dos-pane" role="tabpanel" aria-labelledby="dos" tabIndex="0"><Ahorcado></Ahorcado></div>
                     <div className="tab-pane fade" id="tres-pane" role="tabpanel" aria-labelledby="tres" tabIndex="0"><h1>TRES</h1></div>
                     <div className="tab-pane fade" id="cuatro-pane" role="tabpanel" aria-labelledby="cuatro" tabIndex="0"><h1>CUATRO</h1></div>
                     <div className="tab-pane fade" id="cinco-pane" role="tabpanel" aria-labelledby="cinco" tabIndex="0"><h1>CINCO</h1></div>
