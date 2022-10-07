@@ -13,15 +13,16 @@
     
 }
 .no-pulsado:hover{
-    font-size: 44px;
+    font-size: 35px;
     background-color: #9c9c9c;
-    transition: .1s;
+    transition: .2s;
     
 }
 .pulsado-no-acertado:disabled{
   background-color: rgb(241, 41, 41);
   width: 80px;
   height: 70px;
+  font-size: 40px;
   color: #cccccc;
   border-radius: 10px;
   margin: 1px;
@@ -30,6 +31,7 @@
     background-color: rgb(23, 175, 23);
     width: 80px;
     height: 70px;
+    font-size: 40px;
     color: #cccccc;
     border-radius: 10px;
     margin: 1px;
