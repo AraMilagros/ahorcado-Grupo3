@@ -20,7 +20,7 @@ function Ahorcado() {
 const[palabra, setPalabra] = useState(" ");//se usa para guardar un String con la palabra que hay que adivinar.
 const[palabraRespuesta, setPalabraRespuesta] = useState(" ");//sirve para guardar un String con la palabra oculta.
 const[intentosRestantes, setIntentosRestantes] = useState(6);//depende de el valor de esta variable se muestra una imagen.
-const[mensaje, setMensaje]=useState(" ");//se usa para mostrar un mensaje de si ganó o perdió el jugador.
+const[mensaje1, setMensaje1]=useState(" ");//se usa para mostrar un mensaje de si ganó o perdió el jugador.
 const[mensaje2, setMensaje2]=useState(" ");//en caso de que se pierda se muestra esta variable con un texto acompañado de la palabra que había que adivinar.
 const[arrayPalabra, setArrayPalabra] = useState([]);//es un array que se usa para guardar la palabra que hay que adivinar
 
@@ -64,16 +64,16 @@ const verificarLetra = (event) =>{
 const cambiarResultado = ()=>{
     if(intRest <1){                                     //Si la variable global intRest es menor a 1 se 
         play(sonidoDerrota);                            //con la funcion play se reproduce el audio en el caso que se pierda
-        setMensaje("¡¡MEJOR LA PRÓXIMA!!");             //actualiza el estado del mensaje mencionando la derrota y
+        setMensaje1("¡¡MEJOR LA PRÓXIMA!!");             //actualiza el estado del mensaje mencionando la derrota y
         setMensaje2("La palabra buscada era: "+palabra);//el de un 2do mensaje con la respuesta. Por último se 
         setIntentosRestantes(0);
         deshabilitarBotones();                          //llama a una función que deshabilita todos los botones con letras.
     }else if(faltaParaGanar<1){                 //Si la variable global faltaParaGanar es menor a 1 se
         play(sonidoVictoria);                   //con la funcion play se reproduce el audio en el caso que se gane
-        setMensaje("¡¡FELICIDADES GANASTE!!");  //actualiza el estado del mensaje mencionando la victoria y
+        setMensaje1("¡¡FELICIDADES GANASTE!!");  //actualiza el estado del mensaje mencionando la victoria y
         deshabilitarBotones();                  //se llama a la función que deshabilita todos los botones con letras.
     }else{
-        setMensaje("Adivina la palabra...");  //De no cumplirse ninguna condición se mantiene el mensaje.
+        setMensaje1("Adivina la palabra...");  //De no cumplirse ninguna condición se mantiene el mensaje.
     }
 }
 
@@ -114,8 +114,9 @@ const MostrarImagen = () => {     //ruta de la imagen correspondiente y la funci
 //Esta función reinicia o resetea las variables a sus valores por defecto
 const reiniciarJuego = () =>{
     intRest=6;
+    faltaParaGanar=10;  //de no actualizar el sonido de victoria se repite una vez más
     setIntentosRestantes(intRest);
-    setMensaje("Adivina la palabra");
+    setMensaje1("Adivina la palabra");
     setMensaje2("");
     cambiarResultado(); //se actualiza los mensajes
     asignarPalabra();   // se asigna una nueva palabra
@@ -140,7 +141,7 @@ const deshabilitarBotones =()=>{
     <div className="Ahorcado">
       <main>
         <section>
-          <div className="mensajes">{mensaje}</div>
+          <div className="mensajes">{mensaje1}</div>
           <div className="mensajes3">{palabraRespuesta}</div>
            <div className="mensajes2">{mensaje2}</div>
           <div className="progresoImg">

@@ -21,7 +21,7 @@ export default function VentanModal(props) {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.reiniciarJuego}>Reintentar</Button>
+          {/* <Button onClick={props.reiniciarJuego}>Reintentar</Button> */}
         </Modal.Footer>
       </Modal>
     );
