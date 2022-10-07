@@ -5,7 +5,6 @@
   background: wheat;
   /* border: 2px solid black; */
 }
-
 .btn-git{
   margin: 0;
   /* border: 2px solid white; */
@@ -27,7 +26,9 @@
   overflow: hidden;
 }
 .presentacion {
-  padding: 1rem 0;
+  padding: 1rem 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   /* border: 3px solid black; */
   text-align: center;
   margin-bottom: 0;
@@ -52,7 +53,7 @@
   height: 100%;
 }
 .card{
-  height: 90vh;
+  height: 65vh;
 }
 .diseño{
   display: inline;
@@ -64,4 +65,7 @@
 }
 .interes{
   display: inline;
+}
+.Datos{
+  margin-top: 3%;
 }
