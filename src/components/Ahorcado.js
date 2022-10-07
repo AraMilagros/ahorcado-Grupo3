@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import abecedario from '../json/diccionario.json';
+import abecedario from '../json/abecedario.json';
 import diccionario from '../json/diccionario.json';
 import Botones from "./Botones";
 import Imagenes from "./Imagenes";
