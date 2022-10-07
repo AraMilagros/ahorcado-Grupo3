@@ -25,7 +25,7 @@ export default function AhorcadoAR(){
 
     //funcion para inicializar el juego con los valores por defecto
     const inicializarJuego=()=>{
-        setModalShow(false);
+        setModalShow(false);// oculta la ventana modal
         new Audio(clic).play();
         arrayPalabra=diccionario[Math.floor(Math.random()*diccionario.length)].palabra;//se asigna una palabra random a arrayPalabra
         setNumFallos(0);
@@ -99,16 +99,11 @@ export default function AhorcadoAR(){
                 <VentanModal show={modalShow} mensaje={mensaje} palabra={arrayPalabra}reiniciarJuego={inicializarJuego}/>
             </div>
         );
-
-
     } else {
         return (
             <div className="main">                 
                 <button className="boton-reinicio" onClick={inicializarJuego}>Iniciar Juego</button>
             </div>
-
         );
     }
-        
-
 }
