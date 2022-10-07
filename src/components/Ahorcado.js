@@ -4,6 +4,10 @@ import diccionario from '../json/diccionario.json';
 import Botones from "./Botones";
 import Imagenes from "./Imagenes";
 import "../../src/assets/css/styleA.css";
+import sonidoDerrota from "../assets/sound/gameover.wav";
+import sonidoVictoria from "../assets/sound/win.wav";
+import sonidoClick from "../assets/sound/click.wav";
+import sonidoError from "../assets/sound/error.wav";
 
 //Declaracion de variables Globales.
 let intRest; //se usa para contar los intentos que le quedan al jugador(sirve especialmente para saber si el jugador perdió o no) no se usó useState porque este retardaba el mensaje de derrota.
@@ -41,10 +45,12 @@ const verificarLetra = (event) =>{
             faltaParaGanar--;                 //se resta en una unidad la cantidad de letras que faltan para ganar.
         }                                     //Esto funciona aún si la letra está repetida.
     }
+    play(sonidoClick);
     setPalabraRespuesta(arrayPalabraOculta.join('')); //Si la letra pertenece, se actualiza el estado de la palabra oculta.
   }else{
     intRest--;                      //De no pertenecer la letra a la palabra buscada se resta en una unidad a la variable global
     setIntentosRestantes(intRest);  //de intentos restantes y luego se actualiza el estado de intentosRestantes con este último valor.
+    play(sonidoError);
   }
   for(let j=0; j<abecedario.length;j++){  //Con este for() se busca en el archivo abecedario.json la letra seleccionada
     if(abecedario[j].letra===letra){      //y se cambia el elmento disable por true. Esto es para deshabilitar este botón.
@@ -57,11 +63,13 @@ const verificarLetra = (event) =>{
 //De cumplirse las condiciones la función actualiza los mensajes correspondientes.
 const cambiarResultado = ()=>{
     if(intRest <1){                                     //Si la variable global intRest es menor a 1 se 
+        play(sonidoDerrota);
         setMensaje("¡¡MEJOR LA PRÓXIMA!!");             //actualiza el estado del mensaje mencionando la derrota y
         setMensaje2("La palabra buscada era: "+palabra);//el de un 2do mensaje con la respuesta. Por último se 
         setIntentosRestantes(0);
         deshabilitarBotones();                          //llama a una función que deshabilita todos los botones con letras.
     }else if(faltaParaGanar<1){                 //Si la variable global faltaParaGanar es menor a 1 se
+        play(sonidoVictoria);
         setMensaje("¡¡FELICIDADES GANASTE!!");  //actualiza el estado del mensaje mencionando la victoria y
         deshabilitarBotones();                  //se llama a la función que deshabilita todos los botones con letras.
     }else{
@@ -148,5 +156,8 @@ const deshabilitarBotones =()=>{
       </div>
     </div>
   );
+}
+function play(sonido){
+  new Audio(sonido).play();
 }
 export default Ahorcado;
