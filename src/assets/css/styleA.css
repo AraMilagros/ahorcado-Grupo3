@@ -1,11 +1,12 @@
 
 .Ahorcado{
     display: flex;
-    margin-left: 200px;
-    justify-content: center;
-    align-items: center;
+    /* margin-left: 200px; */
+    margin: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align:center;
-    
+    border: 1px solid black;
     display: block;
 }
 
@@ -25,8 +26,13 @@
 .New{
     display: flex;
     margin-top: 50px;
+    margin-bottom: 20px;
     border: 2px solid #435dcf;
     background-color: #435dcf;
+    color: rgb(208, 227, 249);
+    padding: 7px;
+    width: 130px;
+    justify-content: center;
     margin-left: 10px;
     box-shadow: 0 4px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
     -webkit-transition-duration: 0.4s; 
@@ -35,7 +41,7 @@
 }
 
 .New:hover{
-    background-color:  #51c8d8; 
+    background-color: #51c8d8; 
     color: white;
 }
 
@@ -48,7 +54,7 @@
     transition-duration: 0.4s;
     border: 2px solid #435dcf;
     border-radius: 8px;
-    width: 50px;
+    width: 70px;
 }
 
 .botonesB:hover{
@@ -59,8 +65,6 @@
 .mensajes{
     font-size: 20px;
     text-shadow: 0 0 2px rgb(39, 168, 201);
-   
-    
     
 }
 
@@ -71,6 +75,8 @@
 .mensajes3{
     text-shadow: 0 0 2px rgb(39, 168, 201);
     font-size: 20px;
+    margin-bottom: 2rem;
+    /* border: 2px solid saddlebrown; */
 }
 
 .imagen{
