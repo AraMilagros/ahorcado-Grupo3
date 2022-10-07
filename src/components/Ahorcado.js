@@ -45,12 +45,12 @@ const verificarLetra = (event) =>{
             faltaParaGanar--;                 //se resta en una unidad la cantidad de letras que faltan para ganar.
         }                                     //Esto funciona aún si la letra está repetida.
     }
-    play(sonidoClick);
+    play(sonidoClick);                        //con la funcion play se reproduce el audio cada vez que acierte una letra de la palabra
     setPalabraRespuesta(arrayPalabraOculta.join('')); //Si la letra pertenece, se actualiza el estado de la palabra oculta.
   }else{
     intRest--;                      //De no pertenecer la letra a la palabra buscada se resta en una unidad a la variable global
     setIntentosRestantes(intRest);  //de intentos restantes y luego se actualiza el estado de intentosRestantes con este último valor.
-    play(sonidoError);
+    play(sonidoError);                      //con la funcion play se reproduce el audio cada vez que una letra sea incorrecta
   }
   for(let j=0; j<abecedario.length;j++){  //Con este for() se busca en el archivo abecedario.json la letra seleccionada
     if(abecedario[j].letra===letra){      //y se cambia el elmento disable por true. Esto es para deshabilitar este botón.
@@ -63,13 +63,13 @@ const verificarLetra = (event) =>{
 //De cumplirse las condiciones la función actualiza los mensajes correspondientes.
 const cambiarResultado = ()=>{
     if(intRest <1){                                     //Si la variable global intRest es menor a 1 se 
-        play(sonidoDerrota);
+        play(sonidoDerrota);                            //con la funcion play se reproduce el audio en el caso que se pierda
         setMensaje("¡¡MEJOR LA PRÓXIMA!!");             //actualiza el estado del mensaje mencionando la derrota y
         setMensaje2("La palabra buscada era: "+palabra);//el de un 2do mensaje con la respuesta. Por último se 
         setIntentosRestantes(0);
         deshabilitarBotones();                          //llama a una función que deshabilita todos los botones con letras.
     }else if(faltaParaGanar<1){                 //Si la variable global faltaParaGanar es menor a 1 se
-        play(sonidoVictoria);
+        play(sonidoVictoria);                   //con la funcion play se reproduce el audio en el caso que se gane
         setMensaje("¡¡FELICIDADES GANASTE!!");  //actualiza el estado del mensaje mencionando la victoria y
         deshabilitarBotones();                  //se llama a la función que deshabilita todos los botones con letras.
     }else{
@@ -157,7 +157,7 @@ const deshabilitarBotones =()=>{
     </div>
   );
 }
-function play(sonido){
+function play(sonido){                  //funcion que se encarga de reproducir el sonido.
   new Audio(sonido).play();
 }
 export default Ahorcado;
