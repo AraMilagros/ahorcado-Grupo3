@@ -25,7 +25,7 @@ function Card({imageSource, title, edad, interes, presentation, url}) {
         </div>
 
         </ul>
-        <div className="card-footer">
+        <div className = "card-footer">
         <div className="btn-git">
         <a href={url ? url : "#!"} target="_blank" className="btn btn-outline-secondary border-0" rel="noreferrer">Ir a GitHub</a>
         </div>
