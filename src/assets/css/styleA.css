@@ -2,7 +2,11 @@
 .Ahorcado{
     display: flex;
     margin-left: 200px;
-
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    
+    display: block;
 }
 
 .opciones{
@@ -42,6 +46,7 @@
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     border: 2px solid #435dcf;
+    width: 50px;
 }
 
 .botonesB:hover{
@@ -52,6 +57,9 @@
 .mensajes{
     font-size: 20px;
     text-shadow: 0 0 2px rgb(39, 168, 201);
+   
+    
+    
 }
 
 .mensajes2{
@@ -61,5 +69,10 @@
 .mensajes3{
     text-shadow: 0 0 2px rgb(39, 168, 201);
     font-size: 20px;
+}
+
+.imagen{
+    
+    height: 300px;
 }
 
