@@ -96,7 +96,8 @@ export default function AhorcadoAR(){
                 <PalabraADescubrir palabraADescubrir={palabraOculta} />
                 <Botonera sePresionoBoton={(i) => sePresionoBoton(i)} botones={botones} />
                 <button className="boton-reinicio" onClick={inicializarJuego}>Reiniciar Juego</button>
-                <VentanModal show={modalShow} mensaje={mensaje} palabra={arrayPalabra}reiniciarJuego={inicializarJuego}/>
+                <VentanModal show={modalShow} onHide={inicializarJuego} mensaje={mensaje} palabra={arrayPalabra}/>
+                {/* <VentanModal show={modalShow} mensaje={mensaje} palabra={arrayPalabra}reiniciarJuego={inicializarJuego}/> */}
             </div>
         );
     } else {
