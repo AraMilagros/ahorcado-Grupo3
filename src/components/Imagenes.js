@@ -5,6 +5,7 @@ import img4 from '../assets/img/juego/img3.png';
 import img5 from '../assets/img/juego/img4.png';
 import img6 from '../assets/img/juego/img5.png';
 import img7 from '../assets/img/juego/img6.png';
+import "../../src/assets/css/styleA.css";
 import gameOver from '../assets/img/juego/img7.png';
 
 const Imagenes = (props) => {

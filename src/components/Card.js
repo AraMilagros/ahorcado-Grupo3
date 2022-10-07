@@ -11,11 +11,11 @@ function Card({imageSource, title, edad, interes, presentation, url}) {
       </div>
       <div className="card-body text-ligth">
         <h4 className="titulo">{title}</h4>
-        <div>
+        <div className="Datos">
           <p className="diseño">Edad:⠀</p>
           <p className="edad">{edad}</p>
         </div>
-        <div>
+        <div className="Datos">
           <p className="diseño">Intereses:⠀</p>
           <p className="interes">{interes}</p>
         </div>
