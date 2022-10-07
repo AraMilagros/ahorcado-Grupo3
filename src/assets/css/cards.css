@@ -1,38 +1,66 @@
 .card-img-top{
-    height:max-content;
-  }
-  
-  .card{
-    background: wheat;
-  }
-  .card:hover {
-    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
-    transition: all 0.7s linear;
-  }
-  .card-body {
-    padding: 2rem 0 !important;
-  }
-  .presentacion {
-    padding: 0.3rem 1rem;
-    font-size: 1rem;
-    height: 85px;
-    overflow: auto;
-  }
-  .overflow {
-    overflow: hidden;
-    min-height: 215px;
-  }
-  .card-img-top{
-    transform: scale(1);
-    transition: all 0.2s ease-in-out;
-  }
-  .card-img-top:hover{
-    transform: scale(1.8);
-  }
-  .col-md-4{
-    margin-bottom: 3%;
-    height: 100%;
-  }
-  .card{
-    height: 65vh;
-  }
+  height:max-content;
+} 
+.card{
+  background: wheat;
+  /* border: 2px solid black; */
+}
+
+.btn-git{
+  margin: 0;
+  /* border: 2px solid white; */
+  display: flex;
+  /* margin: auto; */
+  justify-content: center;
+}
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+  transition: all 0.7s linear;
+}
+.card-body {
+  height: 100%;
+  padding: 0.5rem 0 !important;
+  /* border: 2px solid saddlebrown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.presentacion {
+  padding: 0.5rem 0;
+  /* border: 3px solid black; */
+  margin-bottom: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  height: 200px;
+  overflow: auto;
+}
+.overflow {
+  overflow: hidden;
+  /* min-height: 15px; */
+}
+.card-img-top{
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+.card-img-top:hover{
+  transform: scale(1.8);
+}
+.col-md-4{
+  margin-bottom: 3%;
+  height: 100%;
+}
+.card{
+  height: 90vh;
+}
+.diseño{
+  display: inline;
+  font-weight: 700;
+
+}
+.edad{
+  display: inline;
+}
+.interes{
+  display: inline;
+}

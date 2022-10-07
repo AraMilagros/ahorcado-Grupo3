@@ -1,110 +1,110 @@
 [
     {
         "letra" :"A",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"B",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"C",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"D",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"E",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"F",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"G",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"H",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"I",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"J",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"K",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"L",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"M",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"N",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"Ñ",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"O",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"P",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"Q",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"R",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"S",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"T",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"U",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"V",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"W",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"X",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"Y",
-        "disable": false
+        "disable": true
     },
     {
         "letra" :"Z",
-        "disable": false
+        "disable": true
     }
 ]
