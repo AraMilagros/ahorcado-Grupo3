@@ -6,7 +6,7 @@ import "../../src/assets/css/cards.css";
 function Card({imageSource, title, edad, interes, presentation, url}) {
   return (
     <div className="card shadow text-center animate__animated animate__fadeInUp">
-      <div class="card-header text-light">
+      <div className="card-header text-light">
         <h4 className="titulo">{title}</h4>
       </div>
       <div className="overflow">
@@ -14,7 +14,7 @@ function Card({imageSource, title, edad, interes, presentation, url}) {
       </div>
       <div className="card-body text-ligth">
         <p className="presentacion">{presentation}</p>
-        <ul class="list-group list-group-flush">
+        <ul className="list-group list-group-flush">
         <div className="Datos">
           <p className="diseño">Edad:⠀</p>
           <p className="edad">{edad}</p>
@@ -25,7 +25,7 @@ function Card({imageSource, title, edad, interes, presentation, url}) {
         </div>
 
         </ul>
-        <div class = "card-footer">
+        <div className="card-footer">
         <div className="btn-git">
         <a href={url ? url : "#!"} target="_blank" className="btn btn-outline-secondary border-0" rel="noreferrer">Ir a GitHub</a>
         </div>
