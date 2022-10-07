@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.boton-reinicio{
+    margin-top: 25px;
+    align-self: center;
+    width: 200px;
+    font-size: 20px;
+}

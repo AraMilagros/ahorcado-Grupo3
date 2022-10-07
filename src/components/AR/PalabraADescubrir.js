@@ -1,5 +1,6 @@
+import"../../assets/css/palabraADescubrir.css";
 export default function PalabraADescubrir({palabraADescubrir}){
     return(
-        <p>{palabraADescubrir}</p>
+        <p className="palabra-oculta">{palabraADescubrir}</p>
     );
 }

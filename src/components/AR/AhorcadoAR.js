@@ -4,6 +4,9 @@ import diccionario from"../../json/diccionario.json";
 import PalabraADescubrir from "./PalabraADescubrir";
 import Botonera from "./Botonera";
 import Imagen from "./Imagen";
+import clic from "../../assets/sound/click.wav";
+import error from "../../assets/sound/error.wav";
+import "../../assets/css/ahorcadoAR.css";
 
 let arrayPalabra=[];//arreglo vacio donde se almacenará la palabra random
 export default function AhorcadoAR(){  
@@ -15,6 +18,7 @@ export default function AhorcadoAR(){
      
     //funcion para inicializar el juego con los valores por defecto
     const inicializarJuego=()=>{
+        new Audio(clic).play();
         arrayPalabra=diccionario[Math.floor(Math.random()*diccionario.length)].palabra;//se asigna una palabra random a arrayPalabra
         setNumFallos(0);
         setPalabraOculta(Array(arrayPalabra.length).fill("_ "));
@@ -35,8 +39,9 @@ export default function AhorcadoAR(){
         
     })
     // funcion que verifica que letra se presiono
-    const sePresionoBoton = (i) => {
+    const sePresionoBoton = (i) => {      
         if (coincideLetra(i)) {// si la letra coincide se recorre el array de objetos de botones y se le cambia el estado
+            new Audio(clic).play();
             const nuevoEstado=botones.map((obj,index)=>{
                 if(index==i){
                     return{...obj,estado:'pulsado-acertado'};
@@ -47,6 +52,7 @@ export default function AhorcadoAR(){
             setBotones(nuevoEstado);
 
         } else {
+            new Audio(error).play();
             setNumFallos(numFallos + 1);
             const nuevoEstado=botones.map((obj,index)=>{
                 if(index==i){
@@ -75,20 +81,20 @@ export default function AhorcadoAR(){
     //Renderizado codicional
     if (iniciarJuego) {
         return (
-            <>
+            <div className="main">
                 <Imagen imagen={numFallos} />
                 <PalabraADescubrir palabraADescubrir={palabraOculta} />
                 <Botonera sePresionoBoton={(i) => sePresionoBoton(i)} botones={botones} />
-                <button onClick={inicializarJuego}>Reiniciar Juego</button>
-            </>
+                <button className="boton-reinicio" onClick={inicializarJuego}>Reiniciar Juego</button>
+            </div>
         );
 
 
     } else {
         return (
-            <>                 
-                <button onClick={inicializarJuego}>Iniciar Juego</button>
-            </>
+            <div className="main">                 
+                <button className="boton-reinicio" onClick={inicializarJuego}>Iniciar Juego</button>
+            </div>
 
         );
     }

@@ -12,7 +12,7 @@ export default function Botonera({botones,sePresionoBoton}){
     )
     }
     return(
-        <div className='Botones'>{mostrarBotones()}</div>
+        <div className='botones'>{mostrarBotones()}</div>
         
     );
 }
