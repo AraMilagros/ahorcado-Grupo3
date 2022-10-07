@@ -6,7 +6,11 @@ import Botonera from "./Botonera";
 import Imagen from "./Imagen";
 import clic from "../../assets/sound/click.wav";
 import error from "../../assets/sound/error.wav";
+import gameOver from "../../assets/sound/gameover.wav";
+import win from "../../assets/sound/win.wav";
 import "../../assets/css/ahorcadoAR.css";
+import VentanModal from "./VentanaModal";
+
 
 let arrayPalabra=[];//arreglo vacio donde se almacenará la palabra random
 export default function AhorcadoAR(){  
@@ -15,9 +19,13 @@ export default function AhorcadoAR(){
     const [numFallos,setNumFallos]=useState(0);//hook para guardar el numero de fallos
     const [palabraOculta,setPalabraOculta]= useState(["_"]);//hook que sirve para mostrar la palabra oculta
     const [botones,setBotones]=useState(0);//hook que se utilizara para cambiar el estado de los botones
-     
+    // use state para ventana Modal
+    const [modalShow, setModalShow] = useState(false);
+    const [mensaje, setMensaje]= useState("");
+
     //funcion para inicializar el juego con los valores por defecto
     const inicializarJuego=()=>{
+        setModalShow(false);
         new Audio(clic).play();
         arrayPalabra=diccionario[Math.floor(Math.random()*diccionario.length)].palabra;//se asigna una palabra random a arrayPalabra
         setNumFallos(0);
@@ -29,12 +37,14 @@ export default function AhorcadoAR(){
     //useEffect para verificar si gano o perdio
     useEffect(()=>{
         if(palabraOculta.toString()==arrayPalabra.toString()){
-            alert("Ganaste");
-            inicializarJuego();
+            new Audio(win).play();
+            setMensaje("¡Ganaste!");
+            setModalShow(true);
         }
         if(numFallos==6){
-            alert("Perdiste");
-            inicializarJuego();
+            new Audio(gameOver).play();
+            setMensaje("¡Perdiste!");
+            setModalShow(true);
         }
         
     })
@@ -86,6 +96,7 @@ export default function AhorcadoAR(){
                 <PalabraADescubrir palabraADescubrir={palabraOculta} />
                 <Botonera sePresionoBoton={(i) => sePresionoBoton(i)} botones={botones} />
                 <button className="boton-reinicio" onClick={inicializarJuego}>Reiniciar Juego</button>
+                <VentanModal show={modalShow} mensaje={mensaje} palabra={arrayPalabra}reiniciarJuego={inicializarJuego}/>
             </div>
         );
 

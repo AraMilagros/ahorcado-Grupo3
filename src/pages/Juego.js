@@ -6,7 +6,6 @@ export default function Juego(){
     return(
         <>
             <Header/>
-<<<<<<< HEAD
             <nav className="m-2">
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
@@ -40,9 +39,7 @@ export default function Juego(){
                     
                 </div>
         </nav>
-=======
-            <Ahorcado/>    
->>>>>>> 87c389b8b063e9698f415389a00980fbfb3e94af
+
         </>
     );
 }
