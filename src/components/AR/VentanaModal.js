@@ -20,9 +20,9 @@ export default function VentanModal(props) {
             La palabra era: {props.palabra}
           </p>
         </Modal.Body>
-        <Modal.Footer>
-          {/* <Button onClick={props.reiniciarJuego}>Reintentar</Button> */}
-        </Modal.Footer>
+        {/* <Modal.Footer>
+          <Button onClick={props.reiniciarjuego}>Reintentar</Button>
+        </Modal.Footer> */}
       </Modal>
     );
   }
